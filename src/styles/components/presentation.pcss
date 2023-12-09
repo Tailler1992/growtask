@@ -36,11 +36,10 @@
     display: flex;
     align-items: center;
     background-color: var(--color-background);
-    box-shadow: 0 0 20px 0 rgba(13, 64, 64, 0.10);
+    box-shadow: 0 0 20px 0 rgb(13 64 64 / 10%);
     border-radius: 4px;
     cursor: pointer;
     font-size: 20px;
-
     min-height: 72px;
 
     img {
@@ -70,8 +69,7 @@
   }
 }
 
-@media (max-width: 1199px) {
-
+@media (width <= 1199px) {
   .presentation {
     &__wrapper {
       padding: 80px 16px;
@@ -86,7 +84,7 @@
 }
 
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .presentation {
     &__wrapper {
       display: block;

@@ -2,7 +2,6 @@
   padding: 120px 45px;
 
   &__control {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +13,7 @@
     width: 48px;
     height: 48px;
     padding: 12px;
-    box-shadow: 0 0 20px 0 rgba(13, 64, 64, 0.10);
+    box-shadow: 0 0 20px 0 rgb(13 64 64 / 10%);
 
     &:not(:last-child) {
       margin-right: 12px;
@@ -75,11 +74,11 @@
     background: var(--color-background-black);
     font-size: 16px;
     font-weight: 700;
-    color: #ffffff;
+    color: #FFF;
   }
 }
 
-@media (max-width: 1399px) {
+@media (width <= 1399px) {
   .slider {
     &__content {
       height: 420px;
@@ -96,7 +95,7 @@
   }
 }
 
-@media (max-width: 1199px) {
+@media (width <= 1199px) {
   .slider {
     padding: 40px 16px 80px;
 

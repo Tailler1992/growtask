@@ -2,13 +2,8 @@
   margin-top: 69px;
   padding: 44px 45px 120px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
-
+  grid-template: ". gallery" auto "card gallery" 1fr / 1fr 1fr;
   column-gap: 20px;
-  grid-template-areas:
-    ". gallery"
-    "card gallery";
 
   &__info {
     margin: 81px 0 60px;
@@ -41,7 +36,7 @@
     border-radius: 8px;
 
     & > h4 {
-      color: #FFFFFF;
+      color: #FFF;
       font-weight: 800;
 
       & span {
@@ -80,7 +75,7 @@
 }
 
 
-@media (max-width: 1199px) {
+@media (width <= 1199px) {
   .hero {
     padding: 60px 16px;
     margin-top: 64px;
@@ -107,22 +102,20 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (width <= 991px) {
   .hero {
     padding: 71px 16px 82px;
   }
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .hero {
     padding: 70px 16px 83px;
     grid-template-columns: 1fr;
-
     grid-template-areas:
     "."
     "gallery"
     "card";
-
     gap: 40px;
 
     &__info {
