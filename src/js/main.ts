@@ -10,6 +10,7 @@ import "../styles/components/info.pcss";
 import "../styles/components/footer.pcss";
 
 import {burger} from "./burger.ts";
+import {fancybox} from "./fancybox.ts";
 import {slider} from "./slider.ts";
 import {tabs} from "./tabs.ts";
 import {accordion} from "./accordion.ts";
@@ -22,4 +23,5 @@ document.addEventListener("DOMContentLoaded", () => {
   tabs();
   accordion();
   scrolling();
+  fancybox();
 });
