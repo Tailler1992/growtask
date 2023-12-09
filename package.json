@@ -18,5 +18,10 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.28"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
