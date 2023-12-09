@@ -1,13 +1,13 @@
-import "../assets/styles/reset/reset.pcss";
-import "../assets/styles/variables/variables.pcss";
-import "../assets/styles/style.pcss";
-import "../assets/styles/components/header.pcss";
-import "../assets/styles/components/hero.pcss";
-import "../assets/styles/components/about-us.pcss";
-import "../assets/styles/components/slider.pcss";
-import "../assets/styles/components/presentation.pcss";
-import "../assets/styles/components/info.pcss";
-import "../assets/styles/components/footer.pcss";
+import "../styles/reset/reset.pcss";
+import "../styles/variables/variables.pcss";
+import "../styles/style.pcss";
+import "../styles/components/header.pcss";
+import "../styles/components/hero.pcss";
+import "../styles/components/about-us.pcss";
+import "../styles/components/slider.pcss";
+import "../styles/components/presentation.pcss";
+import "../styles/components/info.pcss";
+import "../styles/components/footer.pcss";
 
 import {burger} from "./burger.ts";
 import {slider} from "./slider.ts";
