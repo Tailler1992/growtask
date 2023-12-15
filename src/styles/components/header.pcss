@@ -33,6 +33,16 @@
     align-items: center;
     margin-left: auto;
   }
+
+  &__menu {
+    display: none;
+    font-size: 20px;
+    font-weight: 800;
+
+    &_visible {
+      display: block;
+    }
+  }
 }
 
 .logo {
@@ -80,6 +90,10 @@
     position: relative;
     bottom: 0;
     transition: bottom .35s ease-out;
+  }
+
+  &__open {
+    display: none;
   }
 }
 
@@ -148,6 +162,28 @@
       margin: 6px auto;
       background-color: var(--color-background);
     }
+
+    &__burger_open {
+      position: relative;
+    }
+
+    &__burger_open span {
+      position: absolute;
+      top: 16px;
+      left: 9px;
+    }
+
+    &__burger_open span:first-child {
+      transform:rotate(45deg);
+
+    }
+    &__burger_open span:nth-child(2) {
+      display: none;
+    }
+
+    &__burger_open span:last-child {
+      transform: rotate(-45deg);
+    }
   }
 
   .logo {
@@ -160,7 +196,7 @@
     height: 100%;
     background-color: var(--color-background);
     z-index: 50;
-    padding: 80px 16px 20px;
+    padding: 20px 16px 20px;
 
     &__open {
       display: flex;

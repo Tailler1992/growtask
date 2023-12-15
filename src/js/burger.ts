@@ -2,9 +2,11 @@ export const burger = () => {
   const burgerButton = document.querySelector<HTMLElement>(".header__burger");
   const menu = document.querySelector<HTMLElement>(".mobile-menu");
   const nav = document.querySelector<HTMLElement>(".header__nav");
+  const logo = document.querySelector<HTMLElement>(".logo");
+  const logoMenu = document.querySelector<HTMLElement>(".header__menu");
   const social = document.querySelector<HTMLElement>(".social__items");
 
-  if (!burgerButton || !menu || !nav || !social) return;
+  if (!burgerButton || !menu || !nav || !social || !logo || !logoMenu) return;
 
   const menuContent = nav.cloneNode(true) as HTMLElement;
   const socialContent = social.cloneNode(true) as HTMLElement;
@@ -33,6 +35,9 @@ export const burger = () => {
 
   burgerButton.addEventListener("click", () => {
     menu.classList.toggle("mobile-menu__open");
+    logo.classList.toggle("logo__open");
+    logoMenu.classList.toggle("header__menu_visible");
+    burgerButton.classList.toggle("header__burger_open");
     toggleScrolling();
   });
 
@@ -41,6 +46,7 @@ export const burger = () => {
 
     if (target && target.tagName === "BUTTON" || target.tagName === "A") {
       menu.classList.toggle("mobile-menu__open");
+
       toggleScrolling();
     }
   });
