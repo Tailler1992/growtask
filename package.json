@@ -10,11 +10,13 @@
     "stylelint": "stylelint \"**/*.pcss\" --fix"
   },
   "devDependencies": {
+    "@types/node": "^20.10.4",
     "postcss-nested": "6.0.1",
     "stylelint": "^16.0.1",
     "stylelint-config-standard": "^35.0.0",
     "typescript": "5.2.2",
-    "vite": "^5.0.7"
+    "vite": "^5.0.7",
+    "vite-plugin-handlebars": "^1.6.0"
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.28",
