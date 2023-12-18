@@ -1,0 +1,149 @@
+@import '/src/styles/scss/func';
+
+@font-face {
+  font-family: Gogh;
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/Gogh-ExtraBold.otf") format("opentype");
+}
+
+$hd-width: 1199px;
+$tablet-width: 991px;
+$mobile-width: 576px;
+
+:root {
+  /* Font */
+  --font-raleway: 'Raleway', sans-serif;
+  --font-gogh: 'Gogh', sans-serif;
+  --font-size-base: 16px;
+  --font-size-medium: 24px;
+  --font-size-big: 40px;
+
+  /* Font size */
+  --hd-width: 1499px;
+  --tablet-width: 991px;
+  --mobile-width: 576px;
+
+  /* Text */
+  --color-text-black: #030D0D;
+  --color-text-white: #3D4040;
+  --color-text-black-secondary: #05051A;
+  --color-text-green: #11A6A6;
+
+  /* Background */
+  --color-background: #FFF;
+  --color-background-secondary: #23272F;
+  --color-background-black: #030D0D;
+
+
+  /* Button */
+  --button-color-background: #14CCCC;
+  --button-color-background-hover: #17E5E5;
+  --button-color-background-press: #11A6A6;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--font-raleway);
+  font-weight: 400;
+  font-size: 20px;
+  color: #3D4040;
+  line-height: 150%;
+
+  @media screen and (max-width: $hd-width) {
+    font-size: vwh(16px);
+    line-height: 140%;
+  }
+
+  @media screen and (max-width: $tablet-width) {
+    font-size: vwt(16px);
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    font-size: vwm(16px);
+  }
+}
+
+h1 {
+  font-family: var(--font-gogh);
+  font-size: vw(56px);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-text-black-secondary);
+
+  @media screen and (max-width: $hd-width) {
+    font-size: vwh(56px);
+  }
+
+  @media screen and (max-width: $tablet-width) {
+    font-size: vwt(32px);
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    font-size: vwm(32px);
+  }
+}
+
+h2 {
+  font-family: var(--font-gogh);
+  font-size: vw(40px);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-text-black-secondary);
+
+  @media screen and (max-width: $hd-width) {
+    font-size: vwh(40px);
+  }
+
+  @media screen and (max-width: $tablet-width) {
+    font-size: vwt(40px);
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    font-size: vwm(28px);
+  }
+}
+
+h3 {
+  font-family: var(--font-gogh);
+  font-size: vw(28px);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-text-black-secondary);
+
+  @media screen and (max-width: $hd-width) {
+    font-size: vwh(28px);
+  }
+
+  @media screen and (max-width: $tablet-width) {
+    font-size: vwt(28px);
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    font-size: vwm(24px);
+  }
+}
+
+h4 {
+  font-family: var(--font-gogh);
+  font-size: vw(20px);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-text-black-secondary);
+
+  @media screen and (max-width: $hd-width) {
+    font-size: vwh(20px);
+  }
+
+  @media screen and (max-width: $tablet-width) {
+    font-size: vwt(20px);
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    font-size: vwm(20px);
+  }
+}

@@ -1,8 +1,12 @@
 import "../styles/reset/reset.pcss";
-import "../styles/variables/variables.pcss";
+// import "../styles/variables/variables.pcss";
+import "../styles/variables/variables.scss";
 import "../styles/style.pcss";
+
+import "../partials/hero/hero.scss";
+
 import "../partials/header/header.pcss";
-import "../partials/hero/hero.pcss";
+// import "../partials/hero/hero.pcss";
 import "../partials/about-us/about-us.pcss";
 import "../partials/presentation/presentation.pcss";
 import "../partials/info/info.pcss";
