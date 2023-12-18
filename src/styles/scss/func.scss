@@ -19,3 +19,7 @@
 @function vwm($px, $media: 375) {
   @return math.div(stripUnit($px), stripUnit($media)) * 100 + vw;
 }
+
+$hd-width: 1499px;
+$tablet-width: 991px;
+$mobile-width: 576px;

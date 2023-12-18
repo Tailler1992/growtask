@@ -1,0 +1,242 @@
+@import "../../styles/scss/func";
+
+.about-us {
+  background-color: #E1FAFA;
+
+  &__wrapper {
+    display: flex;
+    column-gap: vw(20px);
+    padding: vw(120px) vw(45px);
+
+    @media screen and (max-width: $hd-width) {
+      column-gap: vwh(20px);
+      padding: vwh(120px) vwh(45px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      flex-direction: column;
+      column-gap: vwt(20px);
+      row-gap: vwt(60px);
+      padding: vwt(80px) vwt(16px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      column-gap: vwm(20px);
+      padding: vwm(80px) vwm(16px);
+    }
+  }
+
+  &__column {
+    flex: 50%;
+  }
+
+  &__column-left {
+    @media screen and (max-width: $tablet-width) {
+      display: flex;
+      justify-content: space-between;
+      gap: vwt(16px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      flex-direction: column;
+      gap: vwm(16px);
+    }
+  }
+
+  &__info, &__cards {
+    @media screen and (max-width: $tablet-width) {
+      flex-basis: 50%;
+    }
+  }
+
+  &__title {
+    margin-bottom: vw(38px);
+
+    @media screen and (max-width: $hd-width) {
+      margin-bottom: vwh(38px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      margin-bottom: vwt(22px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      margin-bottom: vwm(22px);
+    }
+  }
+
+  &__first-text {
+    max-width: vw(550px);
+    margin-bottom: vw(30px);
+
+    @media screen and (max-width: $hd-width) {
+      max-width: vwh(550px);
+      margin-bottom: vwh(30px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      max-width: vwt(550px);
+      margin-bottom: vwt(30px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      max-width: vwm(550px);
+      margin-bottom: vwm(30px);
+    }
+  }
+
+  &__second-text {
+    margin-bottom: vw(82px);
+
+    @media screen and (max-width: $hd-width) {
+      margin-bottom: vwh(82px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      margin-bottom: vwt(82px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      margin-bottom: vwm(20px);
+    }
+  }
+
+  &__cards {
+    position: sticky;
+    top: vw(80px);
+    max-width: vw(580px);
+    display: flex;
+    flex-direction: column;
+    row-gap: vw(20px);
+
+    @media screen and (max-width: $hd-width) {
+      top: vwh(80px);
+      max-width: vwh(520px);
+      row-gap: vwh(20px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      top: vwt(80px);
+      max-width: vwt(520px);
+      row-gap: vwt(20px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      top: vwm(80px);
+      max-width: 100%;
+      row-gap: vwm(20px);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    row-gap: vw(19px);
+    padding: vw(40px) vw(40px) vw(35px);
+    border-radius: vw(8px);
+    background-color: var(--color-background-black);
+
+    @media screen and (max-width: $hd-width) {
+      row-gap: vwh(19px);
+      padding: vwh(40px) vwh(40px) vwh(35px);
+      border-radius: vwh(8px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      row-gap: vwt(14px);
+      padding: vwt(20px);
+      border-radius: vwt(8px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      row-gap: vwt(14px);
+      padding: vwt(20px);
+      border-radius: vwm(8px);
+    }
+  }
+
+  &__card-title {
+    font-family: var(--font-gogh);
+    font-size: vw(56px);
+    font-weight: 800;
+    color: #17E5E5;
+    line-height: 100%;
+
+    @media screen and (max-width: $hd-width) {
+      font-size: vwh(56px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      font-size: vwt(32px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      font-size: vwm(32px);
+    }
+  }
+
+  &__card-info {
+    font-size: vw(16px);
+    color: #FFF;
+
+    @media screen and (max-width: $hd-width) {
+      font-size: vwh(16px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      font-size: vwt(16px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      font-size: vwm(16px);
+    }
+  }
+
+  .swiper {
+    & .swiper-wrapper {
+      flex-direction: column;
+      gap: vw(40px);
+
+      @media screen and (max-width: $hd-width) {
+        gap: vwh(40px);
+      }
+      @media screen and (max-width: $tablet-width) {
+        flex-direction: row;
+        justify-content: start;
+        gap: vwt(16px);
+      }
+      @media screen and (max-width: $mobile-width) {
+        width: 100%;
+        gap: vwm(16px);
+      }
+    }
+
+    & .swiper-slide {
+      max-width: vw(700px);
+      width: 100%;
+      border-radius: vw(8px);
+      overflow: hidden;
+
+      @media screen and (max-width: $hd-width) {
+        max-width: vwh(628px);
+        border-radius: vwh(8px);
+      }
+      @media screen and (max-width: $tablet-width) {
+        max-width: vwt(628px);
+        width: vwt(280px);
+        flex-shrink: 0;
+        border-radius: vwt(8px);
+      }
+      @media screen and (max-width: $mobile-width) {
+        max-width: vwm(200px);
+        width: vwt(280px);
+        border-radius: vwm(8px);
+      }
+    }
+
+    & .swiper-wrapper img {
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      max-height: vw(400px);
+
+      @media screen and (max-width: $hd-width) {
+        max-height: vwh(320px);
+      }
+      @media screen and (max-width: $tablet-width) {
+        max-height: vwt(320px);
+        width: vwt(280px);
+        height: vwt(200px);
+      }
+      @media screen and (max-width: $mobile-width) {
+        max-height: vwm(320px);
+        width: vwt(280px);
+        height: vwt(200px);
+      }
+    }
+  }
+}
+

@@ -1,0 +1,27 @@
+@import "scss/func";
+
+.container {
+  max-width: 1510px;
+  margin: 0 auto;
+}
+
+.button {
+  height: 48px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  color: #FFF;
+  border-radius: 4px;
+  background-color: var(--button-color-background);
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--button-color-background-hover);
+  }
+
+  &:active {
+    background-color: var(--button-color-background-press);
+  }
+}
