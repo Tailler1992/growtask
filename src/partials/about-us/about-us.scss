@@ -136,8 +136,8 @@
       border-radius: vwt(8px);
     }
     @media screen and (max-width: $mobile-width) {
-      row-gap: vwt(14px);
-      padding: vwt(20px);
+      row-gap: vwm(14px);
+      padding: vwm(20px);
       border-radius: vwm(8px);
     }
   }
@@ -211,8 +211,8 @@
         border-radius: vwt(8px);
       }
       @media screen and (max-width: $mobile-width) {
-        max-width: vwm(200px);
-        width: vwt(280px);
+
+        width: vwm(280px);
         border-radius: vwm(8px);
       }
     }
@@ -227,14 +227,14 @@
         max-height: vwh(320px);
       }
       @media screen and (max-width: $tablet-width) {
-        max-height: vwt(320px);
-        width: vwt(280px);
+        max-height: vwt(200px);
         height: vwt(200px);
+        width: vwt(280px);
       }
       @media screen and (max-width: $mobile-width) {
-        max-height: vwm(320px);
-        width: vwt(280px);
-        height: vwt(200px);
+        max-height: vwm(200px);
+        height: vwm(200px);
+        width: vwm(280px);
       }
     }
   }

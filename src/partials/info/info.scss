@@ -1,0 +1,156 @@
+@import "../../styles/scss/func";
+
+.info {
+  padding: vw(120px) vw(45px);
+
+  @media screen and (max-width: $hd-width) {
+    padding: vwh(120px) vwh(45px);
+  }
+  @media screen and (max-width: $tablet-width) {
+    padding: vwt(40px) vwt(16px) vwt(63px);
+  }
+  @media screen and (max-width: $mobile-width) {
+    padding: vwm(40px) vwm(16px) vwm(63px);
+  }
+
+  &__title {
+    margin-bottom: vw(60px);
+
+    @media screen and (max-width: $hd-width) {
+      margin-bottom: vwh(60px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      margin-bottom: vwt(40px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      margin-bottom: vwm(40px);
+    }
+  }
+}
+
+.accordion {
+  &__box {
+    position: relative;
+  }
+
+  &__label {
+    user-select: none;
+    min-height: vw(72px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: vw(12px) vw(12px) vw(12px) vw(24px);
+    background-color: #E1FAFA;
+    border-radius: vw(8px);
+    font-size: vw(16px);
+    font-weight: 700;
+    color: var(--color-text-black-secondary);
+    cursor: pointer;
+
+    @media screen and (max-width: $hd-width) {
+      min-height: vwh(72px);
+      padding: vwh(12px) vwh(12px) vwh(12px) vwh(24px);
+      border-radius: vwh(8px);
+      font-size: vwh(16px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      min-height: vwt(72px);
+      padding: vwt(12px) vwt(12px) vwt(12px) vwt(24px);
+      border-radius: vwt(8px);
+      font-size: vwt(16px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      min-height: vwm(72px);
+      padding: vwm(12px) vwm(12px) vwm(12px) vwm(24px);
+      border-radius: vwm(8px);
+      font-size: vwm(16px);
+    }
+
+    button {
+      padding: 0;
+      user-select: none;
+      width: vw(48px);
+      height: vw(48px);
+
+      @media screen and (max-width: $hd-width) {
+        width: vwh(48px);
+        height: vwh(48px);
+      }
+      @media screen and (max-width: $tablet-width) {
+        width: vwt(48px);
+        height: vwt(48px);
+      }
+      @media screen and (max-width: $mobile-width) {
+        width: vwm(48px);
+        height: vwm(48px);
+      }
+    }
+
+    button img {
+      transition: 0.2s;
+    }
+
+    &:hover {
+      color: var(--button-color-background);
+    }
+
+    &:active {
+      color: var(--button-color-background-press);
+    }
+  }
+
+  &__content {
+    position: relative;
+    background-color: #E1FAFA;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    margin-bottom: vw(20px);
+    border-bottom-left-radius: vw(8px);
+    border-bottom-right-radius: vw(8px);
+    font-size: vw(16px);
+    transform: translateY(-4px);
+
+    @media screen and (max-width: $hd-width) {
+      margin-bottom: vwh(20px);
+      border-bottom-left-radius: vwh(8px);
+      border-bottom-right-radius: vwh(8px);
+      font-size: vwh(16px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      margin-bottom: vwt(16px);
+      border-bottom-left-radius: vwt(8px);
+      border-bottom-right-radius: vwt(8px);
+      font-size: vwt(16px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      margin-bottom: vwm(16px);
+      border-bottom-left-radius: vwm(8px);
+      border-bottom-right-radius: vwm(8px);
+      font-size: vwm(16px);
+    }
+  }
+
+  &__content p {
+    padding: vw(12px) vw(12px) vw(33px) vw(24px);
+
+    @media screen and (max-width: $hd-width) {
+      padding: vwh(12px) vwh(12px) vwh(33px) vwh(24px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      padding: vwt(12px) vwt(12px) vwt(33px) vwt(24px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      padding: vwm(12px) vwm(12px) vwm(33px) vwm(24px);
+    }
+  }
+
+  &__active {
+    display: block;
+  }
+
+  &__active > &__label button img {
+    transform: rotate(45deg);
+  }
+}

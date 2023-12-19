@@ -3,19 +3,24 @@ import "../styles/reset/reset.pcss";
 // import "../styles/variables/variables.pcss";
 // import "../styles/style.pcss";
 
-import "../partials/header/header.pcss";
+// import "../partials/header/header.pcss";
 // import "../partials/hero/hero.pcss";
 // import "../partials/about-us/about-us.pcss";
+// import "../partials/slider/slider.pcss";
 // import "../partials/presentation/presentation.pcss";
 // import "../partials/info/info.pcss";
 // import "../partials/footer/footer.pcss";
-// import "../partials/slider/slider.pcss";
 
 // SCSS
 import "../styles/variables/variables.scss";
 import "../styles/style.scss";
+import "../partials/header/header.scss";
 import "../partials/hero/hero.scss";
 import "../partials/about-us/about-us.scss";
+import "../partials/slider/slider.scss";
+import "../partials/presentation/presentation.scss";
+import "../partials/info/info.scss";
+import "../partials/footer/footer.scss";
 
 import {initMobileMenu} from "./initMobileMenu.ts";
 import {initFansybox} from "./initFansybox.ts";

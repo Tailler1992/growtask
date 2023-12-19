@@ -1,0 +1,436 @@
+@import "../../styles/scss/func";
+
+.footer {
+  background-color: var(--color-background-black);
+
+  &__wrapper {
+    padding: vw(160px) vw(45px);
+
+    @media screen and (max-width: $hd-width) {
+      padding: vwh(160px) vwh(45px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      padding: vwt(80px) 0;
+    }
+    @media screen and (max-width: $mobile-width) {
+      padding: vwm(80px) 0;
+    }
+  }
+
+  &__content {
+    border-radius: vw(4px);
+    padding: vw(60px);
+    display: grid;
+    grid-template-columns: auto minmax(vw(500px), vw(780px));
+    grid-template-rows: vw(167px) auto;
+    gap: 0 vw(20px);
+    grid-template-areas:
+    "left formF"
+    "social formF";
+    justify-content: space-between;
+    background-color: #030D0D;
+    background-image: url("/images/footer-bg/bg-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+
+    @media screen and (max-width: $hd-width) {
+      border-radius: vwh(4px);
+      padding: vwh(60px);
+      grid-template-columns: auto minmax(vwh(500px), vwh(780px));
+      grid-template-rows: vwh(167px) auto;
+      gap: 0 vwh(20px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      border-radius: 0;
+      padding: vwt(40px) vwt(16px);
+      grid-template-areas:
+    "left"
+    "formF"
+    "social";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 0 vwt(20px);
+      background-image: url("/images/footer-bg/bg-2.jpg");
+    }
+    @media screen and (max-width: $mobile-width) {
+      padding: vwm(40px) vwm(16px);
+      gap: 0 vwm(20px);
+      background-image: url("/images/footer-bg/bg-3.jpg");
+    }
+
+  }
+
+  &__left {
+    grid-area: left;
+    color: #FFF;
+    max-width: vw(480px);
+    min-width: vw(370px);
+
+    @media screen and (max-width: $hd-width) {
+      max-width: vwh(480px);
+      min-width: vwh(370px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      max-width: vwt(345px);
+      min-width: auto;
+    }
+    @media screen and (max-width: $mobile-width) {
+      max-width: vwm(345px);
+    }
+  }
+
+  &__title {
+    margin-bottom: vw(20px);
+    color: #FFF;
+
+    @media screen and (max-width: $hd-width) {
+      margin-bottom: vwh(20px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      margin-bottom: vwt(20px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      margin-bottom: vwm(20px);
+    }
+
+  }
+
+  &__description {
+    margin-bottom: vw(45px);
+    font-size: vw(16px);
+
+    @media screen and (max-width: $hd-width) {
+      margin-bottom: vwh(45px);
+      font-size: vwh(16px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      margin-bottom: vwt(45px);
+      font-size: vwt(16px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      margin-bottom: vwm(45px);
+      font-size: vwm(16px);
+    }
+  }
+
+  &__form {
+    grid-area: formF;
+
+    @media screen and (max-width: $tablet-width) {
+      width: 100%;
+      margin-bottom: vwt(32px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      margin-bottom: vwm(32px);
+    }
+  }
+}
+
+.social {
+  grid-area: social;
+
+  &__reminder {
+    font-size: vw(20px);
+    font-weight: 800;
+    margin-bottom: vw(28px);
+    color: #FFF;
+
+    @media screen and (max-width: $hd-width) {
+      font-size: vwh(20px);
+      margin-bottom: vwh(28px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      font-size: vwt(20px);
+      margin-bottom: vwt(28px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      font-size: vwm(20px);
+      margin-bottom: vwm(28px);
+    }
+  }
+
+  &__items {
+    display: flex;
+    column-gap: vw(12px);
+
+    @media screen and (max-width: $hd-width) {
+      column-gap: vwh(12px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      column-gap: vwt(12px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      column-gap: vwm(12px);
+      justify-content: center;
+    }
+
+    a {
+      border-radius: vw(4px);
+      width: vw(48px);
+      height: vw(48px);
+      background-color: var(--color-background);
+      box-shadow: 0 0 vw(20px) 0 rgb(13 64 64 / 10%);
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      @media screen and (max-width: $hd-width) {
+        border-radius: vwh(4px);
+        width: vwh(48px);
+        height: vwh(48px);
+        box-shadow: 0 0 vwh(20px) 0 rgb(13 64 64 / 10%);
+      }
+      @media screen and (max-width: $tablet-width) {
+        border-radius: vwt(4px);
+        width: vwt(48px);
+        height: vwt(48px);
+        box-shadow: 0 0 vwt(20px) 0 rgb(13 64 64 / 10%);
+      }
+      @media screen and (max-width: $mobile-width) {
+        border-radius: vwm(4px);
+        width: vwm(48px);
+        height: vwm(48px);
+        box-shadow: 0 0 vwm(20px) 0 rgb(13 64 64 / 10%);
+      }
+
+      &:hover {
+        background-color: #E1FAFA;
+      }
+
+      &:active {
+        background-color: #DAF2F2;
+      }
+    }
+  }
+
+  &__vk {
+    background-image: url("/images/icons/vk.svg");
+  }
+
+  &__tg {
+    background-image: url("/images/icons/tg.svg");
+  }
+}
+
+.form {
+  padding: vw(40px);
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  row-gap: vw(20px);
+  border-radius: vw(8px);
+
+  @media screen and (max-width: $hd-width) {
+    padding: vwh(40px);
+    row-gap: vwh(20px);
+    border-radius: vwh(8px);
+  }
+  @media screen and (max-width: $tablet-width) {
+    padding: vwt(20px) vwt(16px);
+    gap: vwt(12px);
+    border-radius: vwt(8px);
+  }
+  @media screen and (max-width: $mobile-width) {
+    padding: vwm(20px) vwm(16px);
+    gap: vwm(12px);
+    border-radius: vwm(8px);
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    column-gap: vw(20px);
+
+    @media screen and (max-width: $hd-width) {
+      column-gap: vwh(20px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      gap: vwt(12px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      flex-direction: column;
+      gap: vwm(12px);
+    }
+  }
+
+  &__row-btns {
+    @media screen and (max-width: $tablet-width) {
+      margin-top: vwt(8px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      flex-direction: column-reverse;
+      margin-top: vwm(8px);
+    }
+  }
+
+  &__row-btns button {
+    @media screen and (max-width: $mobile-width) {
+      width: 100%;
+    }
+  }
+
+  &__text-field {
+    min-height: vw(48px);
+    font-size: vw(16px);
+    font-weight: 700;
+    width: 100%;
+    padding: vw(12px) vw(16px);
+    border-radius: vw(4px);
+    border: vw(2px) solid #DAF2F2;
+
+    @media screen and (max-width: $hd-width) {
+      min-height: vwh(48px);
+      font-size: vwh(16px);
+      padding: vwh(12px) vwh(16px);
+      border-radius: vwh(4px);
+      border: vwh(2px) solid #DAF2F2;
+    }
+    @media screen and (max-width: $tablet-width) {
+      min-height: vwt(48px);
+      font-size: vwt(16px);
+      padding: vwt(12px) vwt(16px);
+      border-radius: vwt(4px);
+      border: vwt(2px) solid #DAF2F2;
+    }
+    @media screen and (max-width: $mobile-width) {
+      min-height: vwm(48px);
+      font-size: vwm(16px);
+      padding: vwm(12px) vwm(16px);
+      border-radius: vwm(4px);
+      border: vwm(2px) solid #DAF2F2;
+    }
+
+    &:hover {
+      border-color: #17E5E5;
+    }
+
+    &:focus {
+      border-color: #14CCCC;
+    }
+
+    &::placeholder {
+      color: var(--color-text-white);
+      font-weight: 400;
+    }
+  }
+}
+
+.checkbox {
+  display: inline-flex;
+  position: relative;
+  padding-left: vw(28px);
+  cursor: pointer;
+  font-size: vw(14px);
+  user-select: none;
+  height: vw(18px);
+  align-items: center;
+
+  @media screen and (max-width: $hd-width) {
+    padding-left: vwh(28px);
+    font-size: vwh(14px);
+    height: vwh(18px);
+  }
+  @media screen and (max-width: $tablet-width) {
+    padding-left: vwt(28px);
+    font-size: vwt(14px);
+    height: vwt(18px);
+  }
+  @media screen and (max-width: $mobile-width) {
+    align-self: start;
+    padding-left: vwm(28px);
+    font-size: vwm(14px);
+    height: vwm(18px);
+  }
+
+  &__custom-checkbox {
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__checkmark {
+    width: vw(18px);
+    height: vw(18px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    border-radius: vw(3px);
+    transition: background-color 0.3s;
+    outline: 2px solid #DAF2F2;
+
+    @media screen and (max-width: $hd-width) {
+      width: vwh(18px);
+      height: vwh(18px);
+      border-radius: vwh(3px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      width: vwt(18px);
+      height: vwt(18px);
+      border-radius: vwt(3px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      width: vwm(18px);
+      height: vwm(18px);
+      border-radius: vwm(3px);
+    }
+  }
+
+  &__checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: vw(6px);
+    top: vw(3px);
+    width: vw(6px);
+    height: vw(10px);
+    border: solid #FFF;
+    border-width: 0 vw(2px) vw(2px) 0;
+    transform: rotate(45deg);
+
+    @media screen and (max-width: $hd-width) {
+      left: vwh(6px);
+      top: vwh(3px);
+      width: vwh(6px);
+      height: vwh(10px);
+      border-width: 0 vwh(2px) vwh(2px) 0;
+    }
+    @media screen and (max-width: $tablet-width) {
+      left: vwt(6px);
+      top: vwt(3px);
+      width: vwt(6px);
+      height: vwt(10px);
+      border-width: 0 vwt(2px) vwt(2px) 0;
+    }
+    @media screen and (max-width: $mobile-width) {
+      left: vwm(6px);
+      top: vwm(3px);
+      width: vwm(6px);
+      height: vwm(10px);
+      border-width: 0 vwm(2px) vwm(2px) 0;
+    }
+
+  }
+
+  &__custom-checkbox:hover ~ &__checkmark::after {
+    display: block;
+    border-color: #DAF2F2;
+  }
+
+
+  &__custom-checkbox:checked ~ &__checkmark {
+    background-color: var(--button-color-background);
+    outline: 0;
+  }
+
+  &__custom-checkbox:checked ~ &__checkmark:hover {
+    background-color: var(--button-color-background-hover);
+  }
+
+  &__custom-checkbox:checked ~ &__checkmark::after {
+    display: block;
+    border-color: #FFF;
+  }
+}

@@ -1,16 +1,16 @@
 @import "../../styles/scss/func";
 
+
 .hero {
   display: grid;
   grid-template: ". gallery" auto "card gallery" 1fr / 1fr 1fr;
-
   margin-top: vw(69px);
-  padding: vw(44px) vw(45px) vw(120px);
+  padding: vw(43px) vw(45px) vw(120px);
   column-gap: vw(20px);
 
   @media screen and (max-width: $hd-width) {
     margin-top: vwh(64px);
-    padding: vwh(60px) vwh(16px);
+    padding: vwh(43px) vwh(45px) vwh(120px);
     column-gap: vwh(20px);
   }
 
@@ -27,14 +27,14 @@
     "."
     "gallery"
     "card";
-    gap: vwm(20px);
+    gap: vwm(40px);
   }
 
   &__info {
-    margin: vw(81px) vw(0) vw(60px);
+    margin: vw(80px) vw(0) vw(60px);
 
     @media screen and (max-width: $hd-width) {
-      margin: vwh(81px) vwh(0) vwh(60px);
+      margin: vwh(80px) vwh(0) vwh(60px);
     }
     @media screen and (max-width: $tablet-width) {
       margin: vwt(0) 0 vwt(60px);
@@ -63,7 +63,18 @@
   }
 
   &__info-description {
-    max-width: 460px;
+    max-width: vw(460px);
+
+    @media screen and (max-width: $hd-width) {
+      max-width: vwh(460px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      max-width: vwt(360px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      max-width: 100%;
+    }
+
   }
 
   &__card-wrapper {
@@ -80,20 +91,21 @@
     border-radius: vw(8px);
 
     @media screen and (max-width: $hd-width) {
-      max-width: vwh(342px);
-      padding: vwh(20px);
-      flex-direction: column;
-      align-items: stretch;
+      max-width: vwh(504px);
+      padding: vwh(40px);
       row-gap: vwh(30px);
       border-radius: vwh(8px);
     }
     @media screen and (max-width: $tablet-width) {
+      flex-direction: column;
+      align-items: stretch;
       padding: vwt(20px);
-      max-width: 100%;
+      max-width: vwt(342px);
       row-gap: vwt(20px);
       border-radius: vwt(8px);
     }
     @media screen and (max-width: $mobile-width) {
+      max-width: 100%;
       padding: vwm(20px);
       row-gap: vwm(20px);
       border-radius: vwm(8px);

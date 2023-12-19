@@ -1,0 +1,184 @@
+@import "../../styles/scss/func";
+
+.slider {
+  overflow: hidden;
+
+  &__wrapper {
+    padding: vw(120px) vw(45px);
+
+    @media screen and (max-width: $hd-width) {
+      padding: vwh(120px) vwh(45px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      padding: vwt(40px) vwt(16px) vwt(80px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      padding: vwm(40px) vwm(16px) vwm(80px);
+    }
+  }
+
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: vw(40px);
+
+    @media screen and (max-width: $hd-width) {
+      margin-bottom: vwh(40px);
+    }
+    @media screen and (max-width: $tablet-width) {
+      margin-bottom: vwt(40px);
+    }
+    @media screen and (max-width: $mobile-width) {
+      margin-bottom: vwm(40px);
+    }
+  }
+
+  &__control-btns {
+    @media screen and (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__button {
+    border-radius: vw(8px);
+    width: vw(48px);
+    height: vw(48px);
+    padding: vw(12px);
+    box-shadow: 0 0 vw(20px) 0 rgb(13 64 64 / 10%);
+
+    @media screen and (max-width: $hd-width) {
+      border-radius: vwh(8px);
+      width: vwh(48px);
+      height: vwh(48px);
+      padding: vwh(12px);
+      box-shadow: 0 0 vwh(20px) 0 rgb(13 64 64 / 10%);
+    }
+    @media screen and (max-width: $tablet-width) {
+      border-radius: vwt(8px);
+      width: vwt(48px);
+      height: vwt(48px);
+      padding: vwt(12px);
+      box-shadow: 0 0 vwt(20px) 0 rgb(13 64 64 / 10%);
+    }
+    @media screen and (max-width: $mobile-width) {
+      border-radius: vwm(8px);
+      width: vwm(48px);
+      height: vwm(48px);
+      padding: vwm(12px);
+      box-shadow: 0 0 vwm(20px) 0 rgb(13 64 64 / 10%);
+    }
+
+    &:not(:last-child) {
+      margin-right: vw(12px);
+
+      @media screen and (max-width: $hd-width) {
+        margin-right: vwh(12px);
+      }
+      @media screen and (max-width: $tablet-width) {
+        margin-right: vwt(12px);
+      }
+      @media screen and (max-width: $mobile-width) {
+        margin-right: vwm(12px);
+      }
+    }
+
+    &:hover {
+      background-color: #E1FAFA;
+      box-shadow: none;
+    }
+
+    &:active {
+      background-color: #DAF2F2;
+    }
+  }
+
+  .swiper {
+    &.slider__swiper {
+      overflow: visible;
+    }
+
+    .swiper-slide.slider__item {
+      height: vw(480px);
+      border-radius: vw(8px);
+      border: vw(2px) solid #DAF2F2;
+      overflow: hidden;
+      cursor: pointer;
+
+      @media screen and (max-width: $hd-width) {
+        height: vwh(420px);
+        border-radius: vwh(8px);
+        border: vwh(2px) solid #DAF2F2;
+      }
+      @media screen and (max-width: $tablet-width) {
+        height: vwt(400px);
+        border-radius: vwt(8px);
+        border: vwt(2px) solid #DAF2F2;
+      }
+      @media screen and (max-width: $mobile-width) {
+        height: vwm(400px);
+        border-radius: vwm(8px);
+        border: vwm(2px) solid #DAF2F2;
+      }
+
+      &:not(:last-child) {
+        margin-right: vw(20px);
+
+        @media screen and (max-width: $hd-width) {
+          margin-right: vwh(20px);
+        }
+        @media screen and (max-width: $tablet-width) {
+          margin-right: vwt(16px);
+        }
+        @media screen and (max-width: $mobile-width) {
+          margin-right: vwm(16px);
+        }
+      }
+    }
+
+    .swiper-slide img {
+      object-fit: cover;
+      object-position: top;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__description {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: vw(8px) vw(12px);
+      border-radius: vw(8px);
+      background: var(--color-background-black);
+      font-size: vw(16px);
+      font-weight: 700;
+      color: #FFF;
+
+      @media screen and (max-width: $hd-width) {
+        padding: vwh(8px) vwh(12px);
+        border-radius: vwh(8px);
+        font-size: vwh(16px);
+      }
+      @media screen and (max-width: $tablet-width) {
+        padding: vwt(8px) vwt(12px);
+        border-radius: vwt(8px);
+        font-size: vwt(16px);
+      }
+      @media screen and (max-width: $mobile-width) {
+        padding: vwm(8px) vwm(12px);
+        border-radius: vwm(8px);
+        font-size: vwm(16px);
+      }
+    }
+
+    &-slide:hover .swiper__description {
+      background: #14CCCC;
+    }
+
+    &-slide:hover img {
+      filter: grayscale(80%);
+    }
+  }
+}

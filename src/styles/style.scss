@@ -1,21 +1,50 @@
 @import "scss/func";
 
 .container {
-  max-width: 1510px;
+  max-width: vw(1510px);
   margin: 0 auto;
+
+  @media screen and (max-width: $hd-width) {
+    max-width: vwh(1510px);
+  }
+  @media screen and (max-width: $tablet-width) {
+    max-width: vwt(1510px);
+  }
+  @media screen and (max-width: $mobile-width) {
+    max-width: vwm(1510px);
+  }
 }
 
 .button {
-  height: 48px;
-  padding: 0 20px;
-  font-size: 14px;
+  height: vw(48px);
+  padding: 0 vw(20px);
+  font-size: vw(14px);
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
   color: #FFF;
-  border-radius: 4px;
+  border-radius: vw(4px);
   background-color: var(--button-color-background);
   transition: background-color 0.2s ease-in-out;
+
+  @media screen and (max-width: $hd-width) {
+    height: vwh(48px);
+    padding: 0 vwh(20px);
+    font-size: vwh(14px);
+    border-radius: vwh(4px);
+  }
+  @media screen and (max-width: $tablet-width) {
+    height: vwt(48px);
+    padding: 0 vwt(20px);
+    font-size: vwt(14px);
+    border-radius: vwt(4px);
+  }
+  @media screen and (max-width: $mobile-width) {
+    height: vwm(48px);
+    padding: 0 vwm(20px);
+    font-size: vwm(14px);
+    border-radius: vwm(4px);
+  }
 
   &:hover {
     background-color: var(--button-color-background-hover);
